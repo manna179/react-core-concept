@@ -1,0 +1,20 @@
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+  const handleAdd = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+  };
+  const handleReduce = () => {
+    const Reduce = count - 1;
+    setCount(Reduce)
+  };
+  return (
+    <div style={{ border: "2px solid black",borderRadius:'15px' }}>
+      <h3>Counter:{count} </h3>
+      <button onClick={handleAdd}> add </button>
+      <button onClick={handleReduce}>Reduce</button>
+    </div>
+  );
+}
